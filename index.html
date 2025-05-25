@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Days Passed Since a Date
+Task: Kisi bhi past date se aaj tak kitne din guzray hain, wo calculate karo. -->
+    <div id="box">
+     <input type="text" name="" id="past">
+     <button onclick="add()">Submit</button>
+    </div>
+
+  <script>
+
+   function add(){
+    let userData = document.getElementById("past").value
+    let pastDate = new Date(userData);
+
+    // console.log(pastDate);
+
+    if(pastDate.toString() == "Invalid Date"){
+alert(" xxxx-mm-dd");
+return;
+    }
+    let now = new Date();
+    let diff =   now - pastDate;
+    let finalResult = Math.floor(diff /(24 * 60 * 60 * 1000))
+
+    console.log(finalResult);
+    
+    
+
+
+   }
+
+  </script>
+
+
+</body>
+</html>
