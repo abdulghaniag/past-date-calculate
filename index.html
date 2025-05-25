@@ -4,12 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+  /* Full page background with gradient */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+  }
+
+  /* Glassmorphism container */
+  #box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 350px;
+    text-align: center;
+  }
+
+  /* Input styling */
+  #box input[type="text"] {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #box input[type="text"]:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.4);
+  }
+
+  /* Button styling */
+  #box button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.2s ease;
+  }
+
+  #box button:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    transform: scale(1.05);
+  }
+</style>
+
+    
 </head>
 <body>
-    <!-- Days Passed Since a Date
-Task: Kisi bhi past date se aaj tak kitne din guzray hain, wo calculate karo. -->
+
     <div id="box">
-     <input type="text" name="" id="past">
+     <input type="text" name="" id="past" placeholder="Enter past date to calculate curr">
      <button onclick="add()">Submit</button>
     </div>
 
@@ -29,10 +92,7 @@ return;
     let diff =   now - pastDate;
     let finalResult = Math.floor(diff /(24 * 60 * 60 * 1000))
 
-    console.log(finalResult);
-    
-    
-
+    alert(finalResult);
 
    }
 
